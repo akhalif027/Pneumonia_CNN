@@ -1,15 +1,15 @@
 # Pneumonia_CNN
 
-##Summary
+## Summary
 This project objective was to detertmine whether computer vision could accurately diagnose patients with pneumonia solely based on X-ray images using a convolutional neural network (CNN). The key differentiator between normal and pneumonia X-rays is lobar consolidation-a key indicator for determining pneumonia. The X-ray images were preprocessed and data labels were created before training the model. In conclusion, the CNN model was able to able to accurately predict which patients had pneumonia with an accuracy rate between 75% to 80%. The data orginated from https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia.
 
 
-##Objective
+## Objective
 
 This experiment aims to determine whether machine learning can differentiate the differences between normal patients and patients whose lungs have been infected with pneumonia with high accuracy. If successful, diagnosing early cases of pneumonia may become faster and more efficient.
 
 
-##Data Visualization
+## Data Visualization
 
 ![__results___3_1](https://github.com/user-attachments/assets/a9fe2597-9fdf-4c3a-b9da-f23200cde02a)
 ![__results___4_1](https://github.com/user-attachments/assets/355c239d-3a3d-439a-ae4f-59aa79cebd22)
@@ -23,10 +23,12 @@ Prior to creating the CNN model, all images underwent a transformation to standa
 
 ## Results
 ![__results___23_0](https://github.com/user-attachments/assets/4cd0b6ee-70ca-4db0-8723-53e83ac03948)
+
 The more the model cycles through the data, the more the loss rate decreases. 
 
 
 ![__results___24_0](https://github.com/user-attachments/assets/b27d6766-db91-4a14-b2ce-bd3763ffad12)
+
 The accuracy also increases as the model continues training, The loss rate and accuracy are inversely proportional of each other. 
 
 When the model is trained on data foreign to it the accuracy range decreases to between 75% to 80%. This is an understandable tradeoff proving while not perfect the model is not biased or overfitted to the training data. 
