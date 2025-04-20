@@ -18,7 +18,7 @@ plt.imshow()
 #Data Preprocessing
 
 print(f'Normal Lungs #1 Shape: {normal_image.shape}')
-print(f'Normal Lungs #2 Shape {normal_image2.shape}')
+print(f'Normal Lungs #2 Shape: {pneumonia_image .shape}')
 
 normal_images = os.listdir('/kaggle/input/chest-xray-pneumonia/chest_xray/train/NORMAL/')
 pneumonia_images = os.listdir('/kaggle/input/chest-xray-pneumonia/chest_xray/train/PNEUMONIA/')
@@ -41,7 +41,7 @@ new_normal = image_reprocessing(('/kaggle/input/chest-xray-pneumonia/chest_xray/
 new_pneumonia = image_reprocessing(('/kaggle/input/chest-xray-pneumonia/chest_xray/train/PNEUMONIA/'),pneumonia_images)
 
 #Checking if the standard dimension is applied correctly. 
-print(f' Adjusted image shape : {reprocessed_images[0].shape}')
+print(f' Adjusted image shape : {new_normal[0].shape}')
 
 #Preparing images for model training via one-hot encoding and array convertion. 
 normal_training_labels = [0] * len(normal_images)
@@ -49,7 +49,7 @@ pneumonia_training_labels = [1] * len(pneumonia_images)
 training_labels = normal_training_labels + pneumonia_training_labels 
 len(training_labels)
 
-training_imagews = new_normal + new_pneumonia
+training_images = new_normal + new_pneumonia
 len(training_images)
 
 X = np.array(training_images)
